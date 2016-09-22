@@ -11,9 +11,6 @@ docker run -d \
 
 docker run -d \
   --link proxied:something.lol \
-  -e NGINX_SERVER_NAME=test-server \
-  -e NGINX_SSL_CERT=/var/test/tls.crt \
-  -e NGINX_SSL_KEY=/var/test/tls.key \
   -e NGINX_PROXY_PASS=http://something.lol \
   -e NGO_CLIENT_ID=my_id \
   -e NGO_CLIENT_SECRET=my_secret \

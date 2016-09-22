@@ -1,20 +1,5 @@
 #!/bin/sh -e
 
-if [ -z "${NGINX_SERVER_NAME}" ]; then
-  echo "NGINX_SERVER_NAME is not set"
-  exit 1
-fi
-
-if [ -z "${NGINX_SSL_CERT}" ]; then
-  echo "NGINX_SSL_CERT is not set"
-  exit 1
-fi
-
-if [ -z "${NGINX_SSL_KEY}" ]; then
-  echo "NGINX_SSL_KEY is not set"
-  exit 1
-fi
-
 if [ -z "${NGINX_PROXY_PASS}" ]; then
   echo "NGINX_PROXY_PASS is not set"
   exit 1
