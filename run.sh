@@ -28,4 +28,7 @@ export NGO_EMAIL_AS_USER=${NGO_EMAIL_AS_USER:-true}
 export NGO_EXTRA_VALIDITY=${NGO_EXTRA_VALIDITY:-0}
 export NGO_USER=${NGO_USER:-unknown}
 
+#create self signed ssl cert
+mkdir -p /etc/nginx/certs/
+openssl req -new -nodes -x509 -subj "/C=US/ST=New York/L=New York/O=IT/CN=*.meetup.com" -days 3650 -out /etc/nginx/certs/tls.crt -keyout /etc/nginx/certs/tls.key -extensions v3_ca
 exec nginx -g "daemon off;" -c /etc/nginx/nginx.conf
