@@ -20,10 +20,10 @@ if [ -z "${NGO_TOKEN_SECRET}" ]; then
   exit 1
 fi
 
-if [ -n "${NGO_GENERATE_CERT}" ]; then
+if [ -n "${NGO_GENERATE_CERT_CMD}" ]; then
   #create self signed ssl cert
   mkdir -p /etc/nginx/certs/
-  openssl req -new -nodes -x509 -subj "/C=US/ST=New York/L=New York/O=IT/CN=*.meetup.com" -days 3650 -out /etc/nginx/certs/tls.crt -keyout /etc/nginx/certs/tls.key -extensions v3_ca
+  sh -c "${NGO_GENERATE_CERT_CMD}"
 fi
 
 
