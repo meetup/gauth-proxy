@@ -1,4 +1,4 @@
-# Meetup Google OAuth Proxy
+# Meetup Google OAuth Proxy [![Build Status](https://travis-ci.org/meetup/gauth-proxy.svg?branch=master)](https://travis-ci.org/meetup/gauth-proxy)
 
 A nginx docker image for oauthing with google and
 proxing some service through it.  This is extended
