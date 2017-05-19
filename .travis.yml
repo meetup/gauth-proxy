@@ -28,6 +28,10 @@ after_success:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$(make version)
   - echo "GIT_TAG=$GIT_TAG"
+  - eval "$(ssh-agent)"
+  - echo $GITHUB_DEPLOY_KEY | base64 --decode > /tmp/github_deploy_key
+  - chmod 600 /tmp/github_deploy_key
+  - ssh-add /tmp/github_deploy_key
   - >
     [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] &&
     git tag $GIT_TAG -f -a -m "Version $GIT_TAG built by Travis CI - https://travis-ci.org/$TRAVIS_REPO_SLUG/jobs/$TRAVIS_JOB_ID"
@@ -35,8 +39,3 @@ after_success:
   - >
     [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] &&
     git push -q https://github.com/$TRAVIS_REPO_SLUG --tags || true
-  - eval "$(ssh-agent)"
-  - echo $GITHUB_DEPLOY_KEY | base64 --decode > /tmp/github_deploy_key
-  - chmod 600 /tmp/github_deploy_key
-  - ssh-add /tmp/github_deploy_key
-  - git fetch git@github.com:$TRAVIS_REPO_SLUG.git
