@@ -1,4 +1,4 @@
-FROM cloudflare/nginx-google-oauth:1.1
+FROM cloudflare/nginx-google-oauth:1.1.1
 
 RUN rm -f /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
 
