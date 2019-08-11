@@ -1,4 +1,7 @@
-# Meetup Google OAuth Proxy [![Build Status](https://travis-ci.org/meetup/gauth-proxy.svg?branch=master)](https://travis-ci.org/meetup/gauth-proxy)
+# Meetup Google OAuth Proxy
+[![Build Status](https://travis-ci.org/meetup/gauth-proxy.svg?branch=master)](https://travis-ci.org/meetup/gauth-proxy)
+[![](https://images.microbadger.com/badges/image/meetup/gauth-proxy.svg)](https://microbadger.com/images/meetup/gauth-proxy "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/meetup/gauth-proxy.svg)](https://microbadger.com/images/meetup/gauth-proxy "Get your own version badge on microbadger.com")
 
 A nginx docker image for oauthing with google and
 proxing some service through it.  This is extended
