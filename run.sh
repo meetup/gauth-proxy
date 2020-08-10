@@ -34,5 +34,6 @@ export NGO_SIGNOUT_URI=${NGO_SIGNOUT_URI-/_signout}
 export NGO_EMAIL_AS_USER=${NGO_EMAIL_AS_USER:-true}
 export NGO_EXTRA_VALIDITY=${NGO_EXTRA_VALIDITY:-0}
 export NGO_USER=${NGO_USER:-unknown}
+export NGO_SECURE_COOKIES=${NGO_SECURE_COOKIES:-true}
 
 exec nginx -g "daemon off;" -c /etc/nginx/nginx.conf
