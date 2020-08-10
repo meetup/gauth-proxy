@@ -29,9 +29,7 @@ component-test:
 
 #Pushes the container to the docker registry/repository.
 publish: package
-	docker tag meetup/gauth-proxy:latest $(PUBLISH_TAG)
-	docker push $(PUBLISH_TAG)
-	docker push meetup/gauth-proxy:latest
+	@docker push $(PUBLISH_TAG)
 
 version:
 	@echo $(VERSION)
