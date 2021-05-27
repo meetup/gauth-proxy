@@ -1,5 +1,5 @@
 # Meetup Google OAuth Proxy
-[![Build Status](https://travis-ci.org/meetup/gauth-proxy.svg?branch=master)](https://travis-ci.org/meetup/gauth-proxy)
+[![Build Status](https://travis-ci.com/meetup/gauth-proxy.svg?branch=master)](https://travis-ci.com/meetup/gauth-proxy)
 [![](https://images.microbadger.com/badges/image/meetup/gauth-proxy.svg)](https://microbadger.com/images/meetup/gauth-proxy "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/meetup/gauth-proxy.svg)](https://microbadger.com/images/meetup/gauth-proxy "Get your own version badge on microbadger.com")
 
