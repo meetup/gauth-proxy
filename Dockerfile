@@ -48,7 +48,7 @@ RUN cd /tmp/nginx-${NGINX_VERSION} \
 
 FROM nginx:${NGINX_VERSION}-alpine
 
-RUN apk add --no-cache luajit lua-resty-core lua-resty-lrucache lua5.1-cjson
+RUN apk add --no-cache luajit lua-resty-core lua-resty-lrucache lua5.1-cjson openssl
 
 COPY --from=lua-module /modules/ /usr/lib/nginx/modules/
 
