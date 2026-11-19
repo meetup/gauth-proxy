@@ -7,7 +7,7 @@ PUBLISH_TAG=$1
 
 docker run -d \
   --name proxied \
-  nginx:1.11.4-alpine
+  nginx:1.30.7-alpine
 
 docker run -d \
   --link proxied:something.lol \
